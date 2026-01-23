@@ -1,7 +1,6 @@
-"use client"
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {SignInForm} from "@/components/sign-in-form";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {SignInForm} from "@/components/form/sign-in-form";
+import Link from "next/link";
 
 export default function SignInPage() {
   return (
@@ -16,6 +15,12 @@ export default function SignInPage() {
           <CardContent>
             <SignInForm/>
           </CardContent>
+          <CardFooter>
+            <CardDescription className={'text-center w-full'}>Don&apos;t have an account? <Link
+                className={'underline'}
+                href={'/auth/sign-up'}>Sign
+              up</Link></CardDescription>
+          </CardFooter>
         </Card>
       </div>
   );
